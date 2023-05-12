@@ -1,4 +1,6 @@
 <h1>Check console</h1>
+<p id="myParagraph">Placeholder</p>
+
 <script>
   const data = null;
 
@@ -7,7 +9,10 @@
 
   xhr.addEventListener('readystatechange', function () {
     if (this.readyState === this.DONE) {
-      console.log(this.responseText);
+      var paragraph = document.getElementById('myParagraph');
+  
+  
+      paragraph.textContent = this.responseText;
     }
   });
 
