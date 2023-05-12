@@ -15,11 +15,11 @@
   xhr.addEventListener('readystatechange', function () {
     if (this.readyState === this.DONE) {
       var paragraph = document.getElementById('myParagraph');
-      var parsed_json = JSON.parse(this.responseText);
+      
       
 
   
-      paragraph.textContent = '"value":', parsed_json.data;
+      paragraph.textContent = this.responseText.value;
 ;
     }
   });
