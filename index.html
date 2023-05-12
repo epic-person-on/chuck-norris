@@ -17,9 +17,9 @@
       var paragraph = document.getElementById('myParagraph');
       
       
-
+      var parsed_json = JSON.parse(this.responseText);
   
-      paragraph.textContent = this.responseText.value;
+      paragraph.textContent = parsed_json.value;
 ;
     }
   });
