@@ -1,0 +1,21 @@
+<h1>Check console</h1>
+<script>
+  const data = null;
+
+  const xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+
+  xhr.addEventListener('readystatechange', function () {
+    if (this.readyState === this.DONE) {
+      console.log(this.responseText);
+    }
+  });
+
+  xhr.open('GET', 'https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random');
+  xhr.setRequestHeader('accept', 'application/json');
+  xhr.setRequestHeader('X-RapidAPI-Key', '3b143502a0mshe887b77a672d0b8p10626cjsnaf8a412d73d3');
+  xhr.setRequestHeader('X-RapidAPI-Host', 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com');
+
+  xhr.send(data);
+</script>
+  
